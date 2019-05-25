@@ -16,6 +16,7 @@ available_architectures:
 
 # container parameters
 param_container_name: "{{ project_name }}"
+common_param_env_vars_enabled: false
 param_usage_include_vols: false
 param_usage_include_ports: true
 param_ports:

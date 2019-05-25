@@ -51,8 +51,6 @@ Here are some example snippets to help you get started creating a container.
 ```
 docker create \
   --name=guacd \
-  -e PUID=1000 \
-  -e PGID=1000 \
   -p 4822:4822 \
   --restart unless-stopped \
   linuxserver/guacd
@@ -70,9 +68,6 @@ services:
   guacd:
     image: linuxserver/guacd
     container_name: guacd
-    environment:
-      - PUID=1000
-      - PGID=1000
     ports:
       - 4822:4822
     restart: unless-stopped
@@ -85,21 +80,6 @@ Container images are configured using parameters passed at runtime (such as thos
 | Parameter | Function |
 | :----: | --- |
 | `-p 4822` | Port Guacamole server listens on |
-| `-e PUID=1000` | for UserID - see below for explanation |
-| `-e PGID=1000` | for GroupID - see below for explanation |
-
-## User / Group Identifiers
-
-When using volumes (`-v` flags) permissions issues can arise between the host OS and the container, we avoid this issue by allowing you to specify the user `PUID` and group `PGID`.
-
-Ensure any volume directories on the host are owned by the same user you specify and any permissions issues will vanish like magic.
-
-In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as below:
-
-```
-  $ id username
-    uid=1000(dockeruser) gid=1000(dockergroup) groups=1000(dockergroup)
-```
 
 
 &nbsp;
