@@ -1,0 +1,33 @@
+---
+
+# project information
+project_name: guacd
+project_url: "https://guacamole.apache.org/"
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/guacd.png"
+project_blurb: |
+  [{{ project_name|capitalize }}]({{ project_url }}) - Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH. This container is only the backend server component needed to use The official or 3rd party HTML5 frontends.
+project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+
+# supported architectures
+available_architectures:
+  - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
+  - { arch: "{{ arch_arm64 }}", tag: "arm64v8-latest"}
+  - { arch: "{{ arch_armhf }}", tag: "arm32v7-latest"}
+
+# container parameters
+param_container_name: "{{ project_name }}"
+param_usage_include_vols: false
+param_usage_include_ports: true
+param_ports:
+  - { external_port: "4822", internal_port: "4822", port_desc: "Port Guacamole server listens on" }
+param_usage_include_env: false
+
+# application setup block
+app_setup_block_enabled: true
+app_setup_block: |
+  This is a backend only service, to leverage Guacd server you need to use either the official Java frontend [guacamole-client](https://github.com/apache/guacamole-client) or an open source alterantive like [guacamole-lite](https://github.com/vadimpronin/guacamole-lite). 
+
+# changelog
+changelogs:
+  - { date: "25.05.19:", desc: "Initial Release." }
+

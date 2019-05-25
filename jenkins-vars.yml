@@ -1,0 +1,27 @@
+---
+
+# jenkins variables
+project_name: docker-guacd
+external_type: na
+custom_version_command: "echo 1.0.0"
+release_type: stable
+release_tag: latest
+ls_branch: master
+repo_vars:
+  - BUILD_VERSION_ARG = 'GAUCD_VERSION'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-guacd'
+  - CONTAINER_NAME = 'guacd'
+  - DOCKERHUB_IMAGE = 'linuxserver/guacd'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/guacd'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/guacd'
+  - DIST_IMAGE = 'ubuntu'
+  - MULTIARCH='true'
+  - CI='true'
+  - CI_WEB='false'
+  - CI_PORT='4822'
+  - CI_SSL='false'
+  - CI_DELAY='30'
+  - CI_DOCKERENV='TZ=US/Pacific'
+  - CI_AUTH='user:password'
+  - CI_WEBPATH=''
