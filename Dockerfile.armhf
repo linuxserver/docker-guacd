@@ -104,4 +104,3 @@ COPY /root /
 
 # ports and volumes
 EXPOSE 4822
-VOLUME /config
