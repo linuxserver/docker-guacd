@@ -1,6 +1,6 @@
 FROM lsiobase/ubuntu:arm32v7-bionic as builder
 
-ARG GUACD_VERSION
+ARG GUACD_VERSION=1.0.0
 
 COPY /buildroot /
 
@@ -68,7 +68,7 @@ FROM lsiobase/ubuntu:arm32v7-bionic
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-ARG GUACD_VERSION
+ARG GUACD_VERSION=1.0.0
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Thelamer"
 
@@ -93,7 +93,7 @@ RUN \
  echo "**** clean up ****" && \
  mv \
 	/usr/lib/freerdp/* \
-	/usr/lib/arm-linux-gnu/freerdp && \
+	/usr/lib/arm-linux-gnueabihf/freerdp && \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \

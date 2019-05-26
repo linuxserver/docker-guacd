@@ -1,6 +1,6 @@
 FROM lsiobase/ubuntu:bionic as builder
 
-ARG GUACD_VERSION
+ARG GUACD_VERSION=1.0.0
 
 COPY /buildroot /
 
@@ -54,7 +54,7 @@ RUN \
 	-D \
 	--nodoc \
 	--pkgname guacd \
-	--pkgversion ${GUACD_VERSION} \
+	--pkgversion "${GUACD_VERSION}" \
 	--pakdir /tmp \
 	--exclude "/usr/share/man","/usr/include","/etc" && \
  mkdir -p /tmp/out && \
@@ -68,7 +68,7 @@ FROM lsiobase/ubuntu:bionic
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-ARG GUACD_VERSION
+ARG GUACD_VERSION=1.0.0
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Thelamer"
 
