@@ -57,7 +57,7 @@ libcups22.2.7-1ubuntu2.5
 libcupsimage22.2.7-1ubuntu2.5
 libcurl47.58.0-2ubuntu3.7
 libdatrie10.2.10-7
-libdb5.35.3.28-13.1ubuntu1
+libdb5.35.3.28-13.1ubuntu1.1
 libdbus-1-31.12.2-1ubuntu1
 libdebconfclient00.213ubuntu1
 libexpat12.2.5-3
@@ -140,7 +140,7 @@ librtmp12.4+20151223.gitfa8646d.1-1
 libsasl2-22.1.27~101-g0780600+dfsg-3ubuntu2
 libsasl2-modules2.1.27~101-g0780600+dfsg-3ubuntu2
 libsasl2-modules-db2.1.27~101-g0780600+dfsg-3ubuntu2
-libseccomp22.3.1-2.1ubuntu4.1
+libseccomp22.4.1-0ubuntu0.18.04.2
 libselinux12.7-2build2
 libsemanage12.7-2build2
 libsemanage-common2.7-2build2
