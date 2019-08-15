@@ -24,7 +24,7 @@ fonts-dejavu-core2.37-1
 fonts-dejavu-extra2.37-1
 fonts-liberation1:1.07.4-7~18.04.1
 gcc-8-base8.3.0-6ubuntu1~18.04.1
-ghostscript9.26~dfsg+0-0ubuntu0.18.04.9
+ghostscript9.26~dfsg+0-0ubuntu0.18.04.10
 gpgv2.2.4-1ubuntu1.2
 grep3.1-2
 guacd1.0.0-1
@@ -85,8 +85,8 @@ libgmp102:6.1.2+dfsg-2
 libgnutls303.5.18-1ubuntu1.1
 libgpg-error01.27-6
 libgraphite2-31.3.11-2
-libgs99.26~dfsg+0-0ubuntu0.18.04.9
-libgs9-common9.26~dfsg+0-0ubuntu0.18.04.9
+libgs99.26~dfsg+0-0ubuntu0.18.04.10
+libgs9-common9.26~dfsg+0-0ubuntu0.18.04.10
 libgssapi3-heimdal7.5.0+dfsg-1
 libgssapi-krb5-21.16-2ubuntu0.1
 libharfbuzz0b1.7.2-1ubuntu1
