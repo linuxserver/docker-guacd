@@ -24,7 +24,7 @@ fonts-dejavu-core2.37-1
 fonts-dejavu-extra2.37-1
 fonts-liberation1:1.07.4-7~18.04.1
 gcc-8-base8.3.0-6ubuntu1~18.04.1
-ghostscript9.26~dfsg+0-0ubuntu0.18.04.11
+ghostscript9.26~dfsg+0-0ubuntu0.18.04.12
 gpgv2.2.4-1ubuntu1.2
 grep3.1-2build1
 guacd1.0.0-1
@@ -85,8 +85,8 @@ libgmp102:6.1.2+dfsg-2
 libgnutls303.5.18-1ubuntu1.1
 libgpg-error01.27-6
 libgraphite2-31.3.11-2
-libgs99.26~dfsg+0-0ubuntu0.18.04.11
-libgs9-common9.26~dfsg+0-0ubuntu0.18.04.11
+libgs99.26~dfsg+0-0ubuntu0.18.04.12
+libgs9-common9.26~dfsg+0-0ubuntu0.18.04.12
 libgssapi3-heimdal7.5.0+dfsg-1
 libgssapi-krb5-21.16-2ubuntu0.1
 libharfbuzz0b1.7.2-1ubuntu1
@@ -151,7 +151,7 @@ libsqlite3-03.22.0-1ubuntu0.1
 libss21.44.1-1ubuntu1.2
 libssh2-11.8.0-1
 libssl1.0.01.0.2n-1ubuntu5.3
-libssl1.11.1.1-1ubuntu2.1~18.04.4
+libssl1.11.1.1-1ubuntu2.1~18.04.5
 libstdc++68.3.0-6ubuntu1~18.04.1
 libsystemd0237-3ubuntu10.31
 libtasn1-64.13-2
@@ -207,7 +207,7 @@ mount2.31.1-0.4ubuntu3.4
 multiarch-support2.27-3ubuntu1
 ncurses-base6.1-1ubuntu1.18.04
 ncurses-bin6.1-1ubuntu1.18.04
-openssl1.1.1-1ubuntu2.1~18.04.4
+openssl1.1.1-1ubuntu2.1~18.04.5
 passwd1:4.5-1ubuntu2
 perl-base5.26.1-6ubuntu0.3
 poppler-data0.4.8-2
