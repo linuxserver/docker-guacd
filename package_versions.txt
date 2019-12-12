@@ -134,7 +134,7 @@ libpixman-1-00.34.0-2
 libpng16-161.6.34-1ubuntu0.18.04.2
 libprocps62:3.3.12-3ubuntu1.2
 libpsl50.19.1-5build1
-libpulse01:11.1-1ubuntu7.2
+libpulse01:11.1-1ubuntu7.4
 libroken18-heimdal7.5.0+dfsg-1
 librtmp12.4+20151223.gitfa8646d.1-1
 libsasl2-22.1.27~101-g0780600+dfsg-3ubuntu2
