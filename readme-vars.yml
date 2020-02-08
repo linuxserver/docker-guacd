@@ -30,5 +30,6 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "08.02.20:", desc: "Bump to 1.1.0." }
   - { date: "25.05.19:", desc: "Initial Release." }
 
