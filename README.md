@@ -179,4 +179,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **08.02.20:** - Bump to 1.1.0.
 * **25.05.19:** - Initial Release.

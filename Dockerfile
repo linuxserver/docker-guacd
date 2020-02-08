@@ -1,6 +1,6 @@
 FROM lsiobase/ubuntu:bionic as builder
 
-ARG GUACD_VERSION=1.0.0
+ARG GUACD_VERSION=1.1.0
 
 COPY /buildroot /
 
@@ -11,6 +11,7 @@ RUN \
 	autoconf \
 	automake \
 	checkinstall \
+	freerdp2-dev \
 	gcc-6 \
 	git \
 	libavcodec-dev \
@@ -68,7 +69,7 @@ FROM lsiobase/ubuntu:bionic
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-ARG GUACD_VERSION=1.0.0
+ARG GUACD_VERSION=1.1.0
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Thelamer"
 
@@ -86,14 +87,11 @@ RUN \
 	fonts-dejavu \
 	ghostscript \
 	libcairo2 \
-	libfreerdp-plugins-standard \
+	libfreerdp2-2 \
 	xfonts-terminus && \
  apt-get install -qy --no-install-recommends \
 	$(cat /tmp/out/DEPENDENCIES) && \
  echo "**** clean up ****" && \
- mv \
-	/usr/lib/freerdp/* \
-	/usr/lib/x86_64-linux-gnu/freerdp && \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \
