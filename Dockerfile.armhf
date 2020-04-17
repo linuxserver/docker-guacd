@@ -1,6 +1,6 @@
-FROM lsiobase/ubuntu:arm32v7-bionic as builder
+FROM lsiobase/ubuntu:arm32v7-focal as builder
 
-ARG GUACD_VERSION=1.0.0
+ARG GUACD_VERSION=1.1.0
 
 COPY /buildroot /
 
@@ -11,12 +11,12 @@ RUN \
 	autoconf \
 	automake \
 	checkinstall \
-	gcc-6 \
-	git \
+	curl \
+	freerdp2-dev \
+	gcc \
 	libavcodec-dev \
 	libavutil-dev \
 	libcairo2-dev \
-	libfreerdp-dev \
 	libjpeg-turbo8-dev \
 	libogg-dev \
 	libossp-uuid-dev \
@@ -35,17 +35,19 @@ RUN \
 
 RUN \
  echo "**** prep build ****" && \
- mkdir /tmp/guacd && \
- ln -sf /usr/bin/gcc-6 /usr/bin/gcc && \
- git clone https://github.com/apache/guacamole-server.git /tmp/guacd && \
+ curl -o /tmp/guacd.tar.gz \
+	-L "https://downloads.apache.org/guacamole/${GUACD_VERSION}/source/guacamole-server-${GUACD_VERSION}.tar.gz" && \
+ tar -xf /tmp/guacd.tar.gz -C /tmp && \
+ mv /tmp/guacamole-server* /tmp/guacd && \
  echo "**** build guacd ****" && \
  cd /tmp/guacd && \
- git checkout ${GUACD_VERSION} && \
  autoreconf -fi && \
- ./configure --prefix=/usr && \
- make -j 2 CC=gcc-6 && \
+ ./configure \
+	--prefix=/usr \
+	--disable-guaclog && \
+ make -j 2 && \
  mkdir -p /tmp/out && \
- /bin/list-dependencies.sh \
+ /list-dependencies.sh \
 	"/tmp/guacd/src/guacd/.libs/guacd" \
 	$(find /tmp/guacd | grep "so$") \
 	> /tmp/out/DEPENDENCIES && \
@@ -54,21 +56,20 @@ RUN \
 	-D \
 	--nodoc \
 	--pkgname guacd \
-	--pkgversion ${GUACD_VERSION} \
+	--pkgversion "${GUACD_VERSION}" \
 	--pakdir /tmp \
 	--exclude "/usr/share/man","/usr/include","/etc" && \
- mkdir -p /tmp/out && \
  mv \
 	/tmp/guacd_${GUACD_VERSION}-*.deb \
 	/tmp/out/guacd_${GUACD_VERSION}.deb
 
 # runtime stage
-FROM lsiobase/ubuntu:arm32v7-bionic
+FROM lsiobase/ubuntu:arm32v7-focal
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-ARG GUACD_VERSION=1.0.0
+ARG GUACD_VERSION=1.1.0
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Thelamer"
 
@@ -80,20 +81,14 @@ RUN \
  dpkg --path-include=/usr/share/doc/${PKG_NAME}/* \
 	-i /tmp/out/guacd_${GUACD_VERSION}.deb && \
  apt-get update && \
- apt-get install -qy --no-install-recommends \
+ apt-get install --no-install-recommends -y \
 	ca-certificates \
 	fonts-liberation \
 	fonts-dejavu \
 	ghostscript \
-	libcairo2 \
-	libfreerdp-plugins-standard \
-	xfonts-terminus && \
- apt-get install -qy --no-install-recommends \
+	xfonts-terminus \
 	$(cat /tmp/out/DEPENDENCIES) && \
  echo "**** clean up ****" && \
- mv \
-	/usr/lib/freerdp/* \
-	/usr/lib/arm-linux-gnueabihf/freerdp && \
  rm -rf \
 	/tmp/* \
 	/var/lib/apt/lists/* \
