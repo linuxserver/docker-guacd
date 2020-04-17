@@ -32,7 +32,7 @@
 while [ -n "$1" ]; do
 
     # For all non-Guacamole library dependencies
-    ldd "$1" | grep -v 'libguac' | awk '/=>/{print $(NF-1)}' \
+    ldd "$1" | grep -v 'libguac' | awk '{print $1}' \
         | while read LIBRARY; do
 
         # Determine the Debian package which is associated with that

@@ -30,6 +30,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "17.04.20:", desc: "Bump back 1.1.0, rebase to focal" }
   - { date: "08.02.20:", desc: "Bump to 1.1.0." }
   - { date: "25.05.19:", desc: "Initial Release." }
 
