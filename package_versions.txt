@@ -82,7 +82,7 @@ libgcc11:8.4.0-1ubuntu1~18.04
 libgcrypt201.8.1-4ubuntu1.2
 libglib2.0-02.56.4-0ubuntu0.18.04.6
 libgmp102:6.1.2+dfsg-2
-libgnutls303.5.18-1ubuntu1.3
+libgnutls303.5.18-1ubuntu1.4
 libgpg-error01.27-6
 libgraphite2-31.3.11-2
 libgs99.26~dfsg+0-0ubuntu0.18.04.12
@@ -140,7 +140,7 @@ librtmp12.4+20151223.gitfa8646d.1-1
 libsasl2-22.1.27~101-g0780600+dfsg-3ubuntu2.1
 libsasl2-modules2.1.27~101-g0780600+dfsg-3ubuntu2.1
 libsasl2-modules-db2.1.27~101-g0780600+dfsg-3ubuntu2.1
-libseccomp22.4.1-0ubuntu0.18.04.2
+libseccomp22.4.3-1ubuntu3.18.04.2
 libselinux12.7-2build2
 libsemanage12.7-2build2
 libsemanage-common2.7-2build2
@@ -164,7 +164,7 @@ libudev1237-3ubuntu10.41
 libunistring20.9.9-0ubuntu2
 libusb-1.0-02:1.0.21-2
 libuuid12.31.1-0.4ubuntu3.6
-libvncclient10.9.11+dfsg-1ubuntu1.1
+libvncclient10.9.11+dfsg-1ubuntu1.2
 libvorbis0a1.3.5-4.2
 libvorbisenc21.3.5-4.2
 libwebp60.6.1-2
@@ -190,7 +190,7 @@ libwinpr-utils0.11.1.0~git20140921.1.440916e+dfsg1-15ubuntu1.18.04.1
 libwrap07.6.q-27
 libx11-62:1.6.4-3ubuntu0.2
 libx11-data2:1.6.4-3ubuntu0.2
-libxau61:1.0.8-1
+libxau61:1.0.8-1ubuntu1
 libxcb11.13-2~ubuntu18.04
 libxcb-render01.13-2~ubuntu18.04
 libxcb-shm01.13-2~ubuntu18.04
