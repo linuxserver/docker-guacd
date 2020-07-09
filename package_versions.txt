@@ -99,11 +99,11 @@ libgcc-s110-20200411-0ubuntu1
 libgcrypt201.8.5-5ubuntu1
 libgdbm61.18.1-5
 libgdbm-compat41.18.1-5
-libglib2.0-02.64.2-1~fakesync1
-libglib2.0-bin2.64.2-1~fakesync1
-libglib2.0-data2.64.2-1~fakesync1
-libglib2.0-dev2.64.2-1~fakesync1
-libglib2.0-dev-bin2.64.2-1~fakesync1
+libglib2.0-02.64.3-1~ubuntu20.04.1
+libglib2.0-bin2.64.3-1~ubuntu20.04.1
+libglib2.0-data2.64.3-1~ubuntu20.04.1
+libglib2.0-dev2.64.3-1~ubuntu20.04.1
+libglib2.0-dev-bin2.64.3-1~ubuntu20.04.1
 libgmp102:6.2.0+dfsg-4
 libgnutls303.6.13-2ubuntu1.2
 libgpg-error01.37-1
