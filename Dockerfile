@@ -1,6 +1,6 @@
 FROM lsiobase/ubuntu:focal as builder
 
-ARG GUACD_VERSION=1.1.0
+ARG GUACD_VERSION=1.2.0
 
 COPY /buildroot /
 
@@ -15,6 +15,7 @@ RUN \
 	freerdp2-dev \
 	gcc \
 	libavcodec-dev \
+	libavformat-dev \
 	libavutil-dev \
 	libcairo2-dev \
 	libjpeg-turbo8-dev \
@@ -69,7 +70,7 @@ FROM lsiobase/ubuntu:focal
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-ARG GUACD_VERSION=1.1.0
+ARG GUACD_VERSION=1.2.0
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="Thelamer"
 
