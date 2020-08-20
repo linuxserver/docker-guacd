@@ -133,7 +133,7 @@ liblcms2-22.9-4
 libldap-2.4-22.4.49+dfsg-2ubuntu1.3
 libldap-common2.4.49+dfsg-2ubuntu1.3
 liblz4-11.9.2-2
-liblzma55.2.4-1
+liblzma55.2.4-1ubuntu1
 liblzo2-22.10-2
 libmount12.34-0.1ubuntu9
 libmount-dev2.34-0.1ubuntu9
