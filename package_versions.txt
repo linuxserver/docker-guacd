@@ -46,8 +46,8 @@ krb5-locales1.17-6ubuntu4
 libacl12.2.53-6
 libapt-pkg6.02.0.2ubuntu0.1
 libasn1-8-heimdal7.7.0+dfsg-1ubuntu1
-libasound21.2.2-2.1ubuntu1
-libasound2-data1.2.2-2.1ubuntu1
+libasound21.2.2-2.1ubuntu2
+libasound2-data1.2.2-2.1ubuntu2
 libassuan02.5.3-7ubuntu2
 libasyncns00.8-6
 libattr11:2.4.48-5
@@ -88,8 +88,8 @@ libffi-dev3.3-4
 libflac81.3.3-1build1
 libfontconfig12.13.1-2ubuntu3
 libfontenc11:1.1.4-0ubuntu1
-libfreerdp2-22.1.1+dfsg1-0ubuntu0.20.04.1
-libfreerdp-client2-22.1.1+dfsg1-0ubuntu0.20.04.1
+libfreerdp2-22.2.0+dfsg1-0ubuntu0.20.04.1
+libfreerdp-client2-22.2.0+dfsg1-0ubuntu0.20.04.1
 libfreetype62.10.1-2
 libfribidi01.0.8-2
 libgcc-s110-20200411-0ubuntu1
@@ -170,7 +170,7 @@ libpixman-1-00.38.4-0ubuntu1
 libpng16-161.6.37-2
 libprocps82:3.3.16-1ubuntu2
 libpsl50.21.0-1ubuntu1
-libpulse01:13.99.1-1ubuntu3.5
+libpulse01:13.99.1-1ubuntu3.6
 libpython3.8-minimal3.8.2-1ubuntu1.2
 libpython3.8-stdlib3.8.2-1ubuntu1.2
 libpython3-stdlib3.8.2-0ubuntu2
@@ -213,10 +213,10 @@ libvorbisenc21.3.6-2ubuntu1
 libwebp60.6.1-2
 libwebsockets153.2.1-3
 libwind0-heimdal7.7.0+dfsg-1ubuntu1
-libwinpr2-22.1.1+dfsg1-0ubuntu0.20.04.1
+libwinpr2-22.2.0+dfsg1-0ubuntu0.20.04.1
 libwrap07.6.q-30
-libx11-62:1.6.9-2ubuntu1
-libx11-data2:1.6.9-2ubuntu1
+libx11-62:1.6.9-2ubuntu1.1
+libx11-data2:1.6.9-2ubuntu1.1
 libxau61:1.0.9-0ubuntu1
 libxcb11.14-2
 libxcb-render01.14-2
@@ -226,7 +226,7 @@ libxext62:1.3.4-0ubuntu1
 libxkbfile11:1.1.0-1
 libxrender11:0.9.10-1
 libzstd11.4.4+dfsg-3
-linux-libc-dev5.4.0-42.46
+linux-libc-dev5.4.0-45.49
 locales2.31-0ubuntu9
 login1:4.8.1-1ubuntu5.20.04
 logsave1.45.5-2ubuntu1
