@@ -1,4 +1,4 @@
-FROM lsiobase/ubuntu:focal as builder
+FROM ghcr.io/linuxserver/baseimage-ubuntu:focal as builder
 
 ARG GUACD_VERSION=1.2.0
 
@@ -65,7 +65,7 @@ RUN \
 	/tmp/out/guacd_${GUACD_VERSION}.deb
 
 # runtime stage
-FROM lsiobase/ubuntu:focal
+FROM ghcr.io/linuxserver/baseimage-ubuntu:focal
 
 # set version label
 ARG BUILD_DATE
