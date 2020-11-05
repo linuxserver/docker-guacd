@@ -46,8 +46,8 @@ krb5-locales1.17-6ubuntu4
 libacl12.2.53-6
 libapt-pkg6.02.0.2ubuntu0.1
 libasn1-8-heimdal7.7.0+dfsg-1ubuntu1
-libasound21.2.2-2.1ubuntu2
-libasound2-data1.2.2-2.1ubuntu2
+libasound21.2.2-2.1ubuntu2.1
+libasound2-data1.2.2-2.1ubuntu2.1
 libassuan02.5.3-7ubuntu2
 libasyncns00.8-6
 libattr11:2.4.48-5
@@ -195,14 +195,14 @@ libssh2-11.8.0-2.1build1
 libssh-40.9.3-2ubuntu2.1
 libssl1.11.1.1f-1ubuntu2
 libstdc++610.2.0-5ubuntu1~20.04
-libsystemd0245.4-4ubuntu3.2
+libsystemd0245.4-4ubuntu3.3
 libtasn1-64.16.0-2
 libtelnet20.21-5
 libthai00.1.28-3
 libthai-data0.1.28-3
 libtiff54.1.0+git191117-2build1
 libtinfo66.2-0ubuntu2
-libudev1245.4-4ubuntu3.2
+libudev1245.4-4ubuntu3.3
 libunistring20.9.10-2
 libusb-1.0-02:1.0.23-2build1
 libuuid12.34-0.1ubuntu9.1
@@ -266,5 +266,5 @@ x11-common1:7.7+19ubuntu14
 xfonts-encodings1:1.0.5-0ubuntu1
 xfonts-terminus4.40-2
 xfonts-utils1:7.7+6
-zlib1g1:1.2.11.dfsg-2ubuntu1.1
-zlib1g-dev1:1.2.11.dfsg-2ubuntu1.1
+zlib1g1:1.2.11.dfsg-2ubuntu1.2
+zlib1g-dev1:1.2.11.dfsg-2ubuntu1.2
