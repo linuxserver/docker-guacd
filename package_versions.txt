@@ -108,7 +108,7 @@ libgraphite2-31.3.13-11build1
 libgs99.50~dfsg-5ubuntu4.2
 libgs9-common9.50~dfsg-5ubuntu4.2
 libgssapi3-heimdal7.7.0+dfsg-1ubuntu1
-libgssapi-krb5-21.17-6ubuntu4
+libgssapi-krb5-21.17-6ubuntu4.1
 libharfbuzz0b2.6.4-1ubuntu4
 libhcrypto4-heimdal7.7.0+dfsg-1ubuntu1
 libheimbase1-heimdal7.7.0+dfsg-1ubuntu1
@@ -123,15 +123,15 @@ libjbig02.1-3.1build1
 libjbig2dec00.18-1ubuntu1
 libjpeg88c-2ubuntu8
 libjpeg-turbo82.0.3-0ubuntu1.20.04.1
-libk5crypto31.17-6ubuntu4
+libk5crypto31.17-6ubuntu4.1
 libkeyutils11.6-6ubuntu1
 libkrb5-26-heimdal7.7.0+dfsg-1ubuntu1
-libkrb5-31.17-6ubuntu4
-libkrb5support01.17-6ubuntu4
+libkrb5-31.17-6ubuntu4.1
+libkrb5support01.17-6ubuntu4.1
 libksba81.3.5-2
 liblcms2-22.9-4
-libldap-2.4-22.4.49+dfsg-2ubuntu1.3
-libldap-common2.4.49+dfsg-2ubuntu1.3
+libldap-2.4-22.4.49+dfsg-2ubuntu1.4
+libldap-common2.4.49+dfsg-2ubuntu1.4
 liblz4-11.9.2-2
 liblzma55.2.4-1ubuntu1
 liblzo2-22.10-2
@@ -207,7 +207,7 @@ libunistring20.9.10-2
 libusb-1.0-02:1.0.23-2build1
 libuuid12.34-0.1ubuntu9.1
 libuv11.34.2-1ubuntu1.1
-libvncclient10.9.12+dfsg-9ubuntu0.2
+libvncclient10.9.12+dfsg-9ubuntu0.3
 libvorbis0a1.3.6-2ubuntu1
 libvorbisenc21.3.6-2ubuntu1
 libwebp60.6.1-2
@@ -226,7 +226,7 @@ libxext62:1.3.4-0ubuntu1
 libxkbfile11:1.1.0-1
 libxrender11:0.9.10-1
 libzstd11.4.4+dfsg-3
-linux-libc-dev5.4.0-53.59
+linux-libc-dev5.4.0-54.60
 locales2.31-0ubuntu9.1
 login1:4.8.1-1ubuntu5.20.04
 logsave1.45.5-2ubuntu1
