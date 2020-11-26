@@ -42,12 +42,13 @@ guacd1.2.0-1
 gzip1.10-0ubuntu4
 hostname3.23
 init-system-helpers1.57
-krb5-locales1.17-6ubuntu4
+krb5-locales1.17-6ubuntu4.1
 libacl12.2.53-6
+libapparmor12.13.3-7ubuntu5.1
 libapt-pkg6.02.0.2ubuntu0.1
 libasn1-8-heimdal7.7.0+dfsg-1ubuntu1
-libasound21.2.2-2.1ubuntu2.1
-libasound2-data1.2.2-2.1ubuntu2.1
+libasound21.2.2-2.1ubuntu2.2
+libasound2-data1.2.2-2.1ubuntu2.2
 libassuan02.5.3-7ubuntu2
 libasyncns00.8-6
 libattr11:2.4.48-5
@@ -130,8 +131,8 @@ libkrb5-31.17-6ubuntu4.1
 libkrb5support01.17-6ubuntu4.1
 libksba81.3.5-2
 liblcms2-22.9-4
-libldap-2.4-22.4.49+dfsg-2ubuntu1.4
-libldap-common2.4.49+dfsg-2ubuntu1.4
+libldap-2.4-22.4.49+dfsg-2ubuntu1.5
+libldap-common2.4.49+dfsg-2ubuntu1.5
 liblz4-11.9.2-2
 liblzma55.2.4-1ubuntu1
 liblzo2-22.10-2
@@ -170,7 +171,7 @@ libpixman-1-00.38.4-0ubuntu1
 libpng16-161.6.37-2
 libprocps82:3.3.16-1ubuntu2
 libpsl50.21.0-1ubuntu1
-libpulse01:13.99.1-1ubuntu3.7
+libpulse01:13.99.1-1ubuntu3.8
 libpython3.8-minimal3.8.5-1~20.04
 libpython3.8-stdlib3.8.5-1~20.04
 libpython3-stdlib3.8.2-0ubuntu2
