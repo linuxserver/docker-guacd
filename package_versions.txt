@@ -237,7 +237,7 @@ mime-support3.64ubuntu1
 mount2.34-0.1ubuntu9.1
 ncurses-base6.2-0ubuntu2
 ncurses-bin6.2-0ubuntu2
-openssl1.1.1f-1ubuntu2.2
+openssl1.1.1f-1ubuntu2.3
 passwd1:4.8.1-1ubuntu5.20.04
 perl5.30.0-9ubuntu0.2
 perl-base5.30.0-9ubuntu0.2
