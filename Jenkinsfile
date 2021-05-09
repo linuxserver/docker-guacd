@@ -23,7 +23,7 @@ pipeline {
     DOCKERHUB_IMAGE = 'linuxserver/guacd'
     DEV_DOCKERHUB_IMAGE = 'lsiodev/guacd'
     PR_DOCKERHUB_IMAGE = 'lspipepr/guacd'
-    DIST_IMAGE = 'ubuntu'
+    DIST_IMAGE = 'alpine'
     MULTIARCH='true'
     CI='true'
     CI_WEB='false'
@@ -103,7 +103,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' echo 1.2.0 ''',
+            script: ''' echo 1.3.0 ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }

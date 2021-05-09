@@ -1,102 +1,104 @@
-FROM ghcr.io/linuxserver/baseimage-ubuntu:arm32v7-focal as builder
+# guacamole builder
+FROM ghcr.io/linuxserver/baseimage-alpine:arm32v7-3.13 as guacbuilder
 
-ARG GUACD_VERSION=1.2.0
-
-COPY /buildroot /
+ARG GUACD_VERSION=1.3.0
 
 RUN \
  echo "**** install build deps ****" && \
- apt-get update && \
- apt-get install -qy --no-install-recommends \
+ apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+	ossp-uuid-dev && \
+ apk add --no-cache \
+	cairo-dev \
+	libjpeg-turbo-dev \
+	libpng-dev \
+	ffmpeg-dev \
+	freerdp-dev \
+	openssl-dev \
+	ossp-uuid-dev \
+	pango-dev \
+	pulseaudio-dev \
+	libssh2-dev \
+	libvncserver-dev \
+	libvorbis-dev \	
+	libwebp-dev \
+	libwebsockets-dev \
+	perl \
+	cunit-dev \
 	autoconf \
 	automake \
-	checkinstall \
-	curl \
-	freerdp2-dev \
-	gcc \
-	libavcodec-dev \
-	libavformat-dev \
-	libavutil-dev \
-	libcairo2-dev \
-	libjpeg-turbo8-dev \
-	libogg-dev \
-	libossp-uuid-dev \
-	libpango1.0-dev \
-	libpulse-dev \
-	libssh2-1-dev \
-	libssl-dev \
-	libswscale-dev \
-	libtelnet-dev \
-	libtool \
-	libvncserver-dev \
-	libvorbis-dev \
-	libwebsockets-dev \
-	libwebp-dev \
-	make
+	alpine-sdk
 
 RUN \
- echo "**** prep build ****" && \
- curl -o /tmp/guacd.tar.gz \
-	-L "https://downloads.apache.org/guacamole/${GUACD_VERSION}/source/guacamole-server-${GUACD_VERSION}.tar.gz" && \
- tar -xf /tmp/guacd.tar.gz -C /tmp && \
- mv /tmp/guacamole-server* /tmp/guacd && \
- echo "**** build guacd ****" && \
- cd /tmp/guacd && \
- autoreconf -fi && \
+ echo "**** compile guacamole ****" && \
+ mkdir /buildout && \
+ mkdir /tmp/guac && \
+ cd /tmp/guac && \
+ wget \
+	http://apache.org/dyn/closer.cgi?action=download\&filename=guacamole/${GUACD_VERSION}/source/guacamole-server-${GUACD_VERSION}.tar.gz \
+	-O guac.tar.gz && \
+ tar -xf guac.tar.gz && \
+ cd guacamole-server-${GUACD_VERSION} && \
  ./configure \
 	--prefix=/usr \
-	--disable-guaclog && \
- make -j 2 && \
- mkdir -p /tmp/out && \
- /list-dependencies.sh \
-	"/tmp/guacd/src/guacd/.libs/guacd" \
-	$(find /tmp/guacd | grep "so$") \
-	> /tmp/out/DEPENDENCIES && \
- PREFIX=/usr checkinstall \
-	-y \
-	-D \
-	--nodoc \
-	--pkgname guacd \
-	--pkgversion "${GUACD_VERSION}" \
-	--pakdir /tmp \
-	--exclude "/usr/share/man","/usr/include","/etc" && \
- mv \
-	/tmp/guacd_${GUACD_VERSION}-*.deb \
-	/tmp/out/guacd_${GUACD_VERSION}.deb
+	--sysconfdir=/etc \
+	--mandir=/usr/share/man \
+	--localstatedir=/var \
+	--disable-static \
+	--with-libavcodec \
+	--with-libavutil \
+	--with-libswscale \
+	--with-ssl \
+	--without-winsock \
+	--with-vorbis \
+	--with-pulse \
+	--with-pango \
+	--with-terminal \
+	--with-vnc \
+	--with-rdp \
+	--with-ssh \
+	--without-telnet \
+	--with-webp \
+	--with-websockets && \
+ make && \
+ make DESTDIR=/buildout install
 
 # runtime stage
-FROM ghcr.io/linuxserver/baseimage-ubuntu:arm32v7-focal
+FROM ghcr.io/linuxserver/baseimage-alpine:arm32v7-3.13
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
-ARG GUACD_VERSION=1.2.0
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
-LABEL maintainer="Thelamer"
+LABEL maintainer="thelamer"
 
-# Copy deb into this stage
-COPY --from=builder /tmp/out /tmp/out
+# Copy build outputs
+COPY --from=guacbuilder /buildout /
 
-RUN \
- echo "**** install guacd ****" && \
- dpkg --path-include=/usr/share/doc/${PKG_NAME}/* \
-	-i /tmp/out/guacd_${GUACD_VERSION}.deb && \
- apt-get update && \
- apt-get install --no-install-recommends -y \
-	ca-certificates \
-	fonts-liberation \
-	fonts-dejavu \
-	ghostscript \
-	xfonts-terminus \
-	$(cat /tmp/out/DEPENDENCIES) && \
- echo "**** clean up ****" && \
+RUN \ 
+ echo "**** install packages ****" && \
+ apk add --no-cache \
+	cairo \
+	ffmpeg-libs \
+	freerdp-libs \
+	glib \
+	libcrypto1.1 \
+	libjpeg-turbo \
+	libpng \
+	libpulse \
+	libssh2 \
+	libssl1.1 \
+	libvncserver \
+	libwebp \
+	libwebsockets \
+	pango && \
+ apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+	ossp-uuid && \
+ echo "**** cleanup ****" && \
  rm -rf \
-	/tmp/* \
-	/var/lib/apt/lists/* \
-	/var/tmp/*
+        /tmp/*
 
 # add local files
 COPY /root /
 
-# ports and volumes
+# ports
 EXPOSE 4822
