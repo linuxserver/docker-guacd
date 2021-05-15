@@ -90,7 +90,8 @@ RUN \
 	libvncserver \
 	libwebp \
 	libwebsockets \
-	pango && \
+	pango \
+	terminus-font && \
  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
 	ossp-uuid && \
  echo "**** cleanup ****" && \
