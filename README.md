@@ -195,6 +195,7 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **15.05.21:** - Add terminus font for SSH support.
 * **08.05.21:** - Bump to 1.3.0, rebase to Alpine.
 * **27.07.20:** - Bump to 1.2.0.
 * **17.04.20:** - Bump back 1.1.0, rebase to focal
