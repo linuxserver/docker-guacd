@@ -79,6 +79,7 @@ RUN \
  apk add --no-cache \
 	cairo \
 	ffmpeg-libs \
+	font-terminus-nerd \
 	freerdp-libs \
 	glib \
 	libcrypto1.1 \
@@ -90,8 +91,7 @@ RUN \
 	libvncserver \
 	libwebp \
 	libwebsockets \
-	pango \
-	terminus-font && \
+	pango && \
  apk add --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
 	ossp-uuid && \
  echo "**** cleanup ****" && \

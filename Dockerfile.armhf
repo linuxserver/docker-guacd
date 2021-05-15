@@ -79,6 +79,7 @@ RUN \
  apk add --no-cache \
 	cairo \
 	ffmpeg-libs \
+	font-terminus-nerd \
 	freerdp-libs \
 	glib \
 	libcrypto1.1 \
