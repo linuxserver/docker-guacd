@@ -6,8 +6,8 @@ apk-tools-2.12.7-r0
 bash-5.1.0-r0
 brotli-libs-1.0.9-r3
 busybox-1.32.1-r7
-ca-certificates-20191127-r5
-ca-certificates-bundle-20191127-r5
+ca-certificates-20211220-r0
+ca-certificates-bundle-20211220-r0
 cairo-1.16.0-r2
 coreutils-8.32-r2
 dbus-libs-1.12.20-r1
