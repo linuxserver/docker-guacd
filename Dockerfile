@@ -1,7 +1,7 @@
 # guacamole builder
-FROM ghcr.io/linuxserver/baseimage-alpine:3.13 as guacbuilder
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15 as guacbuilder
 
-ARG GUACD_VERSION=1.3.0
+ARG GUACD_VERSION=1.4.0
 
 RUN \
  echo "**** install build deps ****" && \
@@ -37,6 +37,9 @@ RUN \
 	http://apache.org/dyn/closer.cgi?action=download\&filename=guacamole/${GUACD_VERSION}/source/guacamole-server-${GUACD_VERSION}.tar.gz \
 	-O guac.tar.gz && \
  tar -xf guac.tar.gz && \
+  wget \
+	https://raw.githubusercontent.com/apache/guacamole-server/master/src/guacenc/ffmpeg-compat.c \
+	-O /tmp/guac/guacamole-server-${GUACD_VERSION}/src/guacenc/ffmpeg-compat.c && \
  cd guacamole-server-${GUACD_VERSION} && \
  ./configure \
 	--prefix=/usr \
