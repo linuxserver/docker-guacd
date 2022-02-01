@@ -37,7 +37,7 @@ RUN \
 	http://apache.org/dyn/closer.cgi?action=download\&filename=guacamole/${GUACD_VERSION}/source/guacamole-server-${GUACD_VERSION}.tar.gz \
 	-O guac.tar.gz && \
  tar -xf guac.tar.gz && \
-  wget \
+ wget \ 
 	https://raw.githubusercontent.com/apache/guacamole-server/master/src/guacenc/ffmpeg-compat.c \
 	-O /tmp/guac/guacamole-server-${GUACD_VERSION}/src/guacenc/ffmpeg-compat.c && \
  cd guacamole-server-${GUACD_VERSION} && \
@@ -66,7 +66,7 @@ RUN \
  make DESTDIR=/buildout install
 
 # runtime stage
-FROM ghcr.io/linuxserver/baseimage-alpine:3.13
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 
 # set version label
 ARG BUILD_DATE
