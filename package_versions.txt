@@ -30,7 +30,7 @@ libacl-2.2.53-r0
 libass-0.15.0-r0
 libasyncns-0.8-r1
 libattr-2.4.48-r0
-libblkid-2.36.1-r1
+libblkid-2.37.3-r0
 libbsd-0.10.0-r0
 libbz2-1.0.8-r1
 libc-utils-0.7.2-r3
@@ -45,7 +45,7 @@ libgpg-error-1.41-r0
 libintl-0.20.2-r2
 libjpeg-turbo-2.1.0-r0
 libltdl-2.4.6-r7
-libmount-2.36.1-r1
+libmount-2.37.3-r0
 libogg-1.3.4-r0
 libpciaccess-0.16-r0
 libpng-1.6.37-r1
@@ -61,7 +61,7 @@ libtasn1-4.16.0-r1
 libtheora-1.1.1-r16
 libtls-standalone-2.9.1-r1
 libunistring-0.9.10-r0
-libuuid-2.36.1-r1
+libuuid-2.37.3-r0
 libva-2.10.0-r0
 libvdpau-1.4-r0
 libvncserver-0.9.13-r1
