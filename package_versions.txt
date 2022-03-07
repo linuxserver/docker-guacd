@@ -11,7 +11,7 @@ ca-certificates-bundle-20211220-r0
 cairo-1.16.0-r2
 coreutils-8.32-r2
 dbus-libs-1.12.20-r1
-expat-2.2.10-r5
+expat-2.2.10-r6
 ffmpeg-libs-4.3.3-r0
 flac-1.3.4-r0
 font-terminus-nerd-2.1.0-r5
