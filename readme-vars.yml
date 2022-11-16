@@ -26,7 +26,7 @@ param_usage_include_env: false
 # application setup block
 app_setup_block_enabled: true
 app_setup_block: |
-  This is a backend only service, to leverage Guacd server you need to use either the official Java frontend [guacamole-client](https://github.com/apache/guacamole-client) or an open source alterantive like [guacamole-lite](https://github.com/vadimpronin/guacamole-lite). 
+  This is a backend only service, to leverage Guacd server you need to use either the official Java frontend [guacamole-client](https://github.com/apache/guacamole-client) or an open source alternative like [guacamole-lite](https://github.com/vadimpronin/guacamole-lite). 
 
 # changelog
 changelogs:
