@@ -8,6 +8,11 @@ project_blurb: |
   [{{ project_name|capitalize }}]({{ project_url }}) - Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH. This container is only the backend server component needed to use The official or 3rd party HTML5 frontends.
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 
+project_deprecation_status: true
+project_deprecation_message: |
+  We recommend the official image instead:
+  https://hub.docker.com/r/guacamole/guacd
+
 # supported architectures
 available_architectures:
   - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest"}
@@ -30,6 +35,7 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "15.02.23:", desc: "Deprecate image." }
   - { date: "11.03.22:", desc: "Bump to 1.4.0." }
   - { date: "15.05.21:", desc: "Add terminus font for SSH support." }
   - { date: "08.05.21:", desc: "Bump to 1.3.0, rebase to Alpine." }
